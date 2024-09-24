@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #f8fafc;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+#root {
+  scroll-behavior: smooth;
+}
+
+.h-section {
+  height: calc(100vh - 67px);
+}
+
+summary {
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open]>summary>svg {
+  transform: rotate(90deg);
+}
+
+.content {
+  max-height: 0px;
+  transition: all 0.2s;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+details[open]+.content {
+  max-height: 1000px;
+}
+
+.bg-whatsapp {
+  background-color: rgb(0, 215, 87);
+}
+
+.bg-facebook {
+  background-color: rgb(8, 102, 255);
+}
+
+/* TAMAÑO lg */
+@media (min-width: 1024px) {
+  .tercio-gap {
+    width: calc(33% - 16px);
+  }
+}
